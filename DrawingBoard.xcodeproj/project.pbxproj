@@ -14,7 +14,6 @@
 		325989191800C4FF0082C0B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 325989181800C4FF0082C0B7 /* main.m */; };
 		3259891D1800C4FF0082C0B7 /* DrawingBoardAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3259891C1800C4FF0082C0B7 /* DrawingBoardAppDelegate.m */; };
 		325989201800C4FF0082C0B7 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3259891E1800C4FF0082C0B7 /* Main_iPhone.storyboard */; };
-		325989231800C4FF0082C0B7 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325989211800C4FF0082C0B7 /* Main_iPad.storyboard */; };
 		325989261800C4FF0082C0B7 /* DrawingBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325989251800C4FF0082C0B7 /* DrawingBoardViewController.m */; };
 		325989281800C4FF0082C0B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325989271800C4FF0082C0B7 /* Images.xcassets */; };
 		3259892F1800C4FF0082C0B7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3259892E1800C4FF0082C0B7 /* XCTest.framework */; };
@@ -46,7 +45,6 @@
 		3259891B1800C4FF0082C0B7 /* DrawingBoardAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingBoardAppDelegate.h; sourceTree = "<group>"; };
 		3259891C1800C4FF0082C0B7 /* DrawingBoardAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingBoardAppDelegate.m; sourceTree = "<group>"; };
 		3259891F1800C4FF0082C0B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		325989221800C4FF0082C0B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		325989241800C4FF0082C0B7 /* DrawingBoardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingBoardViewController.h; sourceTree = "<group>"; };
 		325989251800C4FF0082C0B7 /* DrawingBoardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingBoardViewController.m; sourceTree = "<group>"; };
 		325989271800C4FF0082C0B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 				3259891B1800C4FF0082C0B7 /* DrawingBoardAppDelegate.h */,
 				3259891C1800C4FF0082C0B7 /* DrawingBoardAppDelegate.m */,
 				3259891E1800C4FF0082C0B7 /* Main_iPhone.storyboard */,
-				325989211800C4FF0082C0B7 /* Main_iPad.storyboard */,
 				325989241800C4FF0082C0B7 /* DrawingBoardViewController.h */,
 				325989251800C4FF0082C0B7 /* DrawingBoardViewController.m */,
 				325989271800C4FF0082C0B7 /* Images.xcassets */,
@@ -232,7 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				325989231800C4FF0082C0B7 /* Main_iPad.storyboard in Resources */,
 				325989281800C4FF0082C0B7 /* Images.xcassets in Resources */,
 				325989201800C4FF0082C0B7 /* Main_iPhone.storyboard in Resources */,
 				325989171800C4FF0082C0B7 /* InfoPlist.strings in Resources */,
@@ -293,14 +289,6 @@
 				3259891F1800C4FF0082C0B7 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		325989211800C4FF0082C0B7 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				325989221800C4FF0082C0B7 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		325989371800C4FF0082C0B7 /* InfoPlist.strings */ = {
@@ -397,6 +385,7 @@
 				GCC_PREFIX_HEADER = "DrawingBoard/DrawingBoard-Prefix.pch";
 				INFOPLIST_FILE = "DrawingBoard/DrawingBoard-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -410,6 +399,7 @@
 				GCC_PREFIX_HEADER = "DrawingBoard/DrawingBoard-Prefix.pch";
 				INFOPLIST_FILE = "DrawingBoard/DrawingBoard-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

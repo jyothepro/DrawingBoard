@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DrawingBoardViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UISegmentedControl *mirrorEffectState;
+
+- (IBAction)clearBtn:(id)sender;
+- (IBAction)saveBtn:(id)sender;
+
 
 @end
