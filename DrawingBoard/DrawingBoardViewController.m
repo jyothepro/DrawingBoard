@@ -100,16 +100,17 @@ didFinishSavingWithError:(NSError *)error
     CGContextBeginPath(UIGraphicsGetCurrentContext());
     CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
     CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
+	CGContextStrokePath(UIGraphicsGetCurrentContext());
 	
 	if (_mirrorEffectState.selectedSegmentIndex == 0) {
 		CGPoint mirrorlast = [self getMirror:lastPoint];
 		CGContextMoveToPoint(UIGraphicsGetCurrentContext(), mirrorlast.x, mirrorlast.y);
 		CGPoint mirrorCUrrent = [self getMirror:currentPoint];
+		CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), 0, 0, 0, 1);
+		
 		CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), mirrorCUrrent.x, currentPoint.y);
+		CGContextStrokePath(UIGraphicsGetCurrentContext());
 	}
-	
-    CGContextStrokePath(UIGraphicsGetCurrentContext());
-    
     
     [drawImage setFrame:CGRectMake(0, 0, 320, 400)];
     drawImage.image = UIGraphicsGetImageFromCurrentImageContext();
